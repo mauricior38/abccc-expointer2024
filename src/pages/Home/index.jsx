@@ -211,7 +211,14 @@ export default function Home() {
                 Acompanhe todos os detalhes do Cavalo Crioulo na expointer 2024.
               </p>
             </div>
-            <VideoPlayer streamId={"abccc"} streamStatus="broadcasting" />
+
+            <iframe
+              className="w-full h-full"
+              src="https://vdo.alright.global:5443/alright/play.html?id=abccc&playOrder=hls"
+              allowfullscreen
+            ></iframe>
+
+            {/* <VideoPlayer streamId={"abccc"} streamStatus="broadcasting" /> */}
           </div>
         </div>
       </section>
@@ -267,7 +274,6 @@ export function Tabs() {
               {" "}
               Programação
             </Link>
-
           </nav>
         </div>
       </div>
@@ -286,7 +292,7 @@ export function Tabs() {
                       <div className="xl:gap-x-8 col-span-12  ">
                         <div className="mt-4 lg:mt-6 xl:col-span-4 xl:mt-0 ">
                           <h3 className="text-xl font-medium text-gray-900 text-left flex items-center gap-2">
-                            <CalendarIcon className="h-5 w-5"/> {day.title}
+                            <CalendarIcon className="h-5 w-5" /> {day.title}
                           </h3>
 
                           <div
@@ -302,9 +308,7 @@ export function Tabs() {
             </div>
           </>
         ) : (
-          <>
-            
-          </>
+          <></>
         )}
       </section>
     </div>
